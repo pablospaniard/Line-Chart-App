@@ -4,13 +4,13 @@ import PropTypes from 'prop-types'
 import styles from './Button.scss'
 
 const Button = props => {
-  const { select, delete: delBtn, onButtonClick, disabled, text } = props
+  const { first, second, third, onButtonClick, disabled, text } = props
   return (
     <button
       type="button"
-      className={`${select ? styles.Button_Select : null} ${
-        delBtn ? styles.Button_Delete : null
-      }`}
+      className={`${first ? styles.Button_First : null} ${
+        second ? styles.Button_Second : null
+      } ${third ? styles.Button_Third : null}`}
       onClick={onButtonClick}
       disabled={disabled}
     >
@@ -19,19 +19,11 @@ const Button = props => {
   )
 }
 
-Button.defaultProps = {
-  add: null,
-  delete: null,
-  edit: null,
-  disabled: null,
-  onButtonClick: null
-}
-
 Button.propTypes = {
   text: PropTypes.string.isRequired,
-  select: PropTypes.bool,
-  delete: PropTypes.bool,
-  edit: PropTypes.bool,
+  first: PropTypes.bool,
+  second: PropTypes.bool,
+  third: PropTypes.bool,
   disabled: PropTypes.bool,
   onButtonClick: PropTypes.func
 }

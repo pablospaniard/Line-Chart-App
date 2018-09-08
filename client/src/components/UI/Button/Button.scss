@@ -32,7 +32,7 @@
     transition: all 0.8s
   }
 
-  &_Select {
+  &_First {
     @extend .Button;
     background-color: $primary;
 
@@ -46,17 +46,31 @@
     }
   }
 
-  &_Delete {
+  &_Second {
     @extend .Button;
-    background-color: $red;
+    background-color: $secondary;
 
     &:hover {
-      background-color: lighten($red, 15%);
+      background-color: lighten($secondary, 15%);
       cursor: pointer;
     }
 
     &:after {
-      background-color: darken($red, 15%)
+      background-color: darken($secondary, 15%)
+    }
+  }
+
+  &_Third {
+    @extend .Button;
+    background-color: $third;
+
+    &:hover {
+      background-color: lighten($third, 15%);
+      cursor: pointer;
+    }
+
+    &:after {
+      background-color: darken($third, 15%)
     }
   }
 }
