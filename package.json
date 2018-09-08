@@ -1,0 +1,24 @@
+{
+  "name": "intellisense-server",
+  "version": "0.0.1",
+  "description": "test back - front",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "test": "npm run test --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Pavel Ivanov",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^3.6.0",
+    "express": "^4.14.0",
+    "faker": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  }
+}
