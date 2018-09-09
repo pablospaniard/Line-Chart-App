@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Grid } from '@material-ui/core'
 import { Line as LineChart } from 'react-chartjs-2'
 
-import { Button, Spinner } from '../UI'
+import { Spinner } from '../UI'
 import styles from './Item.scss'
 
 class Item extends Component {
@@ -38,11 +38,11 @@ class Item extends Component {
       ],
       datasets: [
         {
-          label: 'My First dataset',
+          label: 'First dataset',
           fill: false,
           lineTension: 0.5,
           backgroundColor: 'rgba(75,192,192,0.4)',
-          borderColor: 'rgba(75,192,192,1)',
+          borderColor: 'transparent',
           borderCapStyle: 'butt',
           borderDash: [],
           borderDashOffset: 0.0,
@@ -54,16 +54,16 @@ class Item extends Component {
           pointHoverBackgroundColor: 'rgba(75,192,192,1)',
           pointHoverBorderColor: 'rgba(220,220,220,1)',
           pointHoverBorderWidth: 2,
-          pointRadius: 3,
+          pointRadius: 5,
           pointHitRadius: 10,
           data: dataSet[0]
         },
         {
-          label: 'My Second dataset',
+          label: 'Second dataset',
           fill: false,
           lineTension: 0.5,
           backgroundColor: 'rgba(192,192,75,0.4)',
-          borderColor: 'rgba(192,192,75,1)',
+          borderColor: 'transparent',
           borderCapStyle: 'butt',
           borderDash: [],
           borderDashOffset: 0.0,
@@ -75,16 +75,16 @@ class Item extends Component {
           pointHoverBackgroundColor: 'rgba(192,192,75,1)',
           pointHoverBorderColor: 'rgba(220,220,220,1)',
           pointHoverBorderWidth: 2,
-          pointRadius: 3,
+          pointRadius: 5,
           pointHitRadius: 10,
           data: dataSet[1]
         },
         {
-          label: 'My Third dataset',
+          label: 'Third dataset',
           fill: false,
           lineTension: 0.5,
           backgroundColor: 'rgba(192,75,192,0.4)',
-          borderColor: 'rgba(192,75,192,1)',
+          borderColor: 'transparent',
           borderCapStyle: 'butt',
           borderDash: [],
           borderDashOffset: 0.0,
@@ -96,7 +96,7 @@ class Item extends Component {
           pointHoverBackgroundColor: 'rgba(192,75,192,1)',
           pointHoverBorderColor: 'rgba(220,220,220,1)',
           pointHoverBorderWidth: 2,
-          pointRadius: 3,
+          pointRadius: 5,
           pointHitRadius: 10,
           data: dataSet[2]
         }
@@ -108,20 +108,19 @@ class Item extends Component {
     }
 
     const chartOptions = {
-      position: 'bottom'
+      position: 'bottom',
+      tooltips: {
+        mode: 'label'
+      },
+      elements: {
+        line: {
+          fill: false
+        }
+      }
     }
 
     return (
       <Grid container className={styles.Item}>
-        <Grid item xs={12}>
-          <Button text="First" first onButtonClick={this.onChartButtonClick} />
-          <Button
-            text="Second"
-            second
-            onButtonClick={this.onChartButtonClick}
-          />
-          <Button text="Third" third onButtonClick={this.onChartButtonClick} />
-        </Grid>
         <Grid item xs={6} className={styles.Chart}>
           {loading ? (
             <Spinner />

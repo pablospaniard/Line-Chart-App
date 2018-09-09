@@ -9,11 +9,7 @@ const generateData = () => {
     let dataSet = new Array()
     dataContainer.data.push(dataSet)
     for (let i = 0; i < 20; i++) {
-      dataSet.push(
-        faker.fake(
-          '{{finance.accountName}}, {{finance.account}} {{finance.amount}}'
-        )
-      )
+      dataSet.push(Number(faker.fake('{{finance.amount}}')))
     }
   }
 }
