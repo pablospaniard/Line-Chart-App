@@ -10,8 +10,8 @@
     "test": "jest --watch",
     "coverage": "jest --coverage",
     "test:ci": "CI=true jest --env=jsdom --runInBand",
-    "precommit": "lint-staged",
-    "prepush": "yarn test:ci"
+    "precommit": "lint-staged"
+
   },
   "author": "Pavel Ivanov",
   "license": "ISC",

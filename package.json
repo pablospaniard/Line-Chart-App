@@ -9,7 +9,9 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "test": "npm run test --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "precommit": "lint-staged --prefix client",
+    "prepush": "yarn test:ci --prefix client"
   },
   "author": "Pavel Ivanov",
   "license": "ISC",
