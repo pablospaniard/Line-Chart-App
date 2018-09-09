@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item should works properly should match snapshot: Item_snapshot_1 1`] = `
+<div
+  class="MuiGrid-container-1 Item"
+>
+  <div
+    class="MuiGrid-item-2 MuiGrid-grid-xs-6-35 Chart"
+    data-testid="chart"
+  >
+    <canvas
+      height="150"
+      width="300"
+    />
+  </div>
+</div>
+`;

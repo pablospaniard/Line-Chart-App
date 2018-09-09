@@ -215,9 +215,9 @@ class Item extends Component {
 
     return (
       <Grid container className={styles.Item}>
-        <Grid item xs={6} className={styles.Chart}>
+        <Grid item xs={6} className={styles.Chart} data-testid="chart">
           {loading ? (
-            <Spinner />
+            <Spinner data-testid="spinner" />
           ) : (
             <LineChart
               data={data}
