@@ -1,2 +1,2 @@
-web: npm client
+web: npm run client
 api: npm start

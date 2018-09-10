@@ -10,7 +10,7 @@
     "client": "npm start --prefix client",
     "test": "npm run test --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm client-install && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client-install && npm run build --prefix client"
   },
   "author": "Pavel Ivanov",
   "license": "ISC",
