@@ -1,20 +1,11 @@
-# Audio Decoder App
-
-## You can check app here: https://salty-forest-88930.herokuapp.com/
-
-(it could take up to 30 seconds to start app)
+# Line Chart App
 
 ### Start the project:
 
 - clone this repo
-- `yarn install`
-- `yarn start`
+- `npm install && npm install --prefix client`
+- `npm run dev`
 
 ### Tests
 
-- `yarn test`
-
-## Important Note:
-
-you will need to have a CORS extension enabled on your browser to donwload mp3
-file.
+- `npm run test`

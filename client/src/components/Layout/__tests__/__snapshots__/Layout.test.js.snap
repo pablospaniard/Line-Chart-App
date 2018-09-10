@@ -2,7 +2,7 @@
 
 exports[`Layout should works properly should match snapshot: Layout_snapshot_1 1`] = `
 <div
-  class="MuiGrid-container-1 Layout"
+  class="MuiGrid-container-1"
 >
   <div
     class="MuiGrid-item-2 MuiGrid-grid-xs-12-41"

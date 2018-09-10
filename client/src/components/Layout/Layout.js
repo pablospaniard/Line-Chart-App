@@ -4,8 +4,6 @@ import { Grid } from '@material-ui/core'
 
 import { Item } from '../'
 
-import styles from './Layout.scss'
-
 class Layout extends Component {
   componentWillMount = () => {
     this.props.fetchData()
@@ -14,7 +12,7 @@ class Layout extends Component {
   render() {
     const { dataSet, err, loading } = this.props
     return (
-      <Grid container className={styles.Layout}>
+      <Grid container>
         <Grid item xs={12}>
           <Item dataSet={dataSet} error={err} loading={loading} />
         </Grid>
@@ -27,7 +25,6 @@ Layout.propTypes = {
   fetchData: PropTypes.func,
   dataSet: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   err: PropTypes.object,
-  src: PropTypes.string,
   loading: PropTypes.bool
 }
 
